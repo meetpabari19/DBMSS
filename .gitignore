@@ -1,0 +1,5 @@
+# Donot version control node_modules
+node_modules/
+
+# environment files
+.env
