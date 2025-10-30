@@ -8,13 +8,20 @@ const SECRET = process.env.JWT_SECRET || "replace_this_secret";
 router.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
-    if (!email || !password) return res.status(400).json({ error: "email & password required" });
+    if (!email || !password) 
+      return res.status(400).json({ error: "email & password required" });
+
     const existing = await User.findOne({ email });
-    if (existing) return res.status(400).json({ error: "User exists" });
+
+    if (existing)
+     return res.status(400).json({ error: "User exists" });
+
     const hashed = await bcrypt.hash(password, 10);
+
     const user = new User({ name, email, password: hashed });
     await user.save();
     res.json({ ok: true });
+    
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "server error" });

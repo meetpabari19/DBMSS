@@ -7,7 +7,10 @@ export default function Dashboard({ token, onLogout }){
     if (!navigator.geolocation){ setStatus("Geolocation not supported"); return; }
     navigator.geolocation.getCurrentPosition(async pos => {
       const lat = pos.coords.latitude; const lon = pos.coords.longitude;
-      setStatus(`Coords ${lat.toFixed(5)}, ${lon.toFixed(5)} — querying backend...`);
+      // const lat = 19.912552; const lon = 73.707820;
+      // const lat = 13.0630227; const lon = 77.5930842;
+      // const lat = 22.813740; const lon = 72.833305;
+      setStatus(`Coords ${lat.toFixed(5)}, ${lon.toFixed(5)} - Fetching Data`);
       try {
         const res = await fetch(`http://localhost:4000/api/road-info?lat=${lat}&lon=${lon}`, { headers: { Authorization: "Bearer "+token } });
         const data = await res.json();

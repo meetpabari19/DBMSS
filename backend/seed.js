@@ -3,11 +3,11 @@ const connectDB = require("./db");
 const SpeedLimit = require("./models/SpeedLimit");
 
 const seedData = [
-  { vehicleClass: "M1 (<=8 seats)", expressway: 120, fourLane: 100, municipal: 70, otherRoads: 70 },
-  { vehicleClass: "M2/M3 (>=9 seats)", expressway: 100, fourLane: 90, municipal: 60, otherRoads: 60 },
-  { vehicleClass: "N (Goods vehicles)", expressway: 80, fourLane: 80, municipal: 60, otherRoads: 60 },
+  { vehicleClass: "Car", expressway: 120, fourLane: 100, municipal: 70, otherRoads: 60 },
+  { vehicleClass: "Bus", expressway: 100, fourLane: 90, municipal: 60, otherRoads: 50 },
+  { vehicleClass: "Truck", expressway: 80, fourLane: 80, municipal: 60, otherRoads: 50 },
   { vehicleClass: "Motorcycles", expressway: 80, fourLane: 80, municipal: 60, otherRoads: 60 },
-  { vehicleClass: "Quadricycle", expressway: null, fourLane: 60, municipal: 50, otherRoads: 50 },
+  { vehicleClass: "Quadricycle", expressway: null, fourLane: 60, municipal: 50, otherRoads: 40 },
   { vehicleClass: "Three-wheeled vehicles", expressway: null, fourLane: 50, municipal: 50, otherRoads: 50 },
 ];
 
