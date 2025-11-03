@@ -16,7 +16,7 @@ export default function App(){
         {view==="login" && <Login onLogin={onLogin} onShowRegister={()=>setView("register")} />}
         {view==="dashboard" && <Dashboard token={token} onLogout={onLogout} />}
       </main>
-      <footer></footer>
+      <footer>DBMS Project : H4 Group</footer>
     </div>
   );
 }
