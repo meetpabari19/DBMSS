@@ -22,7 +22,7 @@ function auth(req, res, next) {
 function mapHighway(tag) {
   const m = {
     motorway: "Expressway / National Highway",
-    trunk: "National Highway",
+    trunk: "National Highway (Trunk)",
     primary: "State Highway / Primary",
     secondary: "Major District Road (Secondary)",
     tertiary: "Other District Road (Tertiary)",
@@ -36,7 +36,7 @@ function mapHighway(tag) {
 function decideColumnIndex(tag, tags) {
   const t = (tag || "").toLowerCase();
   if (t.includes("motorway") || t.includes("expressway")) return 0;
-  if (t.includes("truck") || t.includes("primary")) return 1;
+  if (t.includes("trunk") || t.includes("primary")) return 1;
   if (tags && (tags.city || tags.town || tags.place)) return 2;
   return 3;
 }
