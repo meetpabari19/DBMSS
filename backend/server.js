@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Connect DB
+// Connect DB to MongoDB
 connectDB();
 
 // Routes
