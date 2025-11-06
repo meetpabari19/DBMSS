@@ -4,46 +4,46 @@ const SpeedLimit = require("./models/SpeedLimit");
 
 const seedData = [
   {
-    vehicleClass: "M1 (<=8 seats)",
+    vehicleClass: "Car",
     expressway: 120,
     fourLane: 100,
     municipal: 70,
-    otherRoads: 70,
+    otherRoads: 40,
   },
   {
-    vehicleClass: "M2/M3 (>=9 seats)",
+    vehicleClass: "Bus",
     expressway: 100,
     fourLane: 90,
     municipal: 60,
-    otherRoads: 60,
+    otherRoads: 30,
   },
   {
-    vehicleClass: "N (Goods vehicles)",
+    vehicleClass: "Truck",
     expressway: 80,
     fourLane: 80,
     municipal: 60,
-    otherRoads: 60,
+    otherRoads: 30,
   },
   {
     vehicleClass: "Motorcycles",
     expressway: 80,
     fourLane: 80,
     municipal: 60,
-    otherRoads: 60,
+    otherRoads: 40,
   },
   {
     vehicleClass: "Quadricycle",
     expressway: null,
     fourLane: 60,
     municipal: 50,
-    otherRoads: 50,
+    otherRoads: 30,
   },
   {
     vehicleClass: "Three-wheeled vehicles",
     expressway: null,
     fourLane: 50,
     municipal: 50,
-    otherRoads: 50,
+    otherRoads: 30,
   },
 ];
 
