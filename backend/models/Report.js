@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
 const ReportSchema = new mongoose.Schema({
-  vehicle: String,
-  location: String,
+  vehicle: { type: String, required: true },
+  location: { type: String, default: "Unknown" },
   coordinates: {
-    lat: Number,
-    lon: Number,
+    lat: { type: Number, required: true },
+    lon: { type: Number, required: true },
   },
   roadCondition: String,
   traffic: String,

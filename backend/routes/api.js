@@ -22,7 +22,7 @@ function auth(req, res, next) {
 function mapHighway(tag) {
   const m = {
     motorway: "Expressway / National Highway",
-    trunk: "National Highway (Trunk)",
+    trunk: "National Highway",
     primary: "State Highway / Primary",
     secondary: "Major District Road (Secondary)",
     tertiary: "Other District Road (Tertiary)",
@@ -41,8 +41,8 @@ function decideColumnIndex(tag, tags) {
   return 3;
 }
 
-// Route to get road info by coords (auth required)
 router.get("/road-info", async (req, res) => {
+  console.log("I am Called!")
   const { lat, lon } = req.query;
   if (!lat || !lon)
     return res.status(400).json({ error: "lat & lon required" });
@@ -78,9 +78,9 @@ router.get("/road-info", async (req, res) => {
       found: true,
       highwayTag: highway,
       roadType,
-      columnIndex: col,
+      // columnIndex: col,
       speeds,
-      rawTags: tags,
+      // rawTags: tags,
     });
   } catch (err) {
     console.error("Overpass error:", err.message || err);
@@ -88,7 +88,6 @@ router.get("/road-info", async (req, res) => {
   }
 });
 
-// Route to check speeds (given vehicleClass, currentSpeed, roadType)
 router.post("/checkSpeed", async (req, res) => {
   try {
     const { vehicleClass, roadType, currentSpeed } = req.body;
@@ -101,7 +100,7 @@ router.post("/checkSpeed", async (req, res) => {
       return res
         .status(404)
         .json({ error: "No speed limit configured for this vehicle class" });
-    // decide column
+
     let col = "otherRoads";
     const t = (roadType + "").toLowerCase();
     if (t.includes("expressway") || t.includes("motorway")) col = "expressway";

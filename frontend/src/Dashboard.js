@@ -61,8 +61,14 @@ export default function Dashboard({ token, onLogout }) {
 
     navigator.geolocation.getCurrentPosition(
       async (pos) => {
-        const lat = pos.coords.latitude;
-        const lon = pos.coords.longitude;
+        // const lat = pos.coords.latitude;
+        // const lon = pos.coords.longitude;
+
+        // const lat = 18.806813;
+        // const lon = 73.319644;
+
+        const lat = 21.863221;
+        const lon = 72.949822;
 
         setUserLocation({
           lat: lat.toFixed(5),
@@ -140,7 +146,7 @@ export default function Dashboard({ token, onLogout }) {
             <div>
               <h3>Detected Road</h3>
               <p>
-                <b>OSM tag:</b> {info.highwayTag}
+                
               </p>
               <p>
                 <b>Road type:</b> {info.roadType}
@@ -152,7 +158,7 @@ export default function Dashboard({ token, onLogout }) {
                   <tr>
                     <th>Vehicle</th>
                     <th>Speed</th>
-                    <th></th>
+                    <th>Feedback</th>
                   </tr>
                 </thead>
                 <tbody>

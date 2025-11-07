@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "auto": "^11.3.0",
+    "chart.js": "^4.5.1",
     "react": "18.2.0",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "18.2.0",
-    "react-scripts": "^0.0.0"
+    "react-scripts": "^0.0.0",
+    "react-toastify": "^11.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

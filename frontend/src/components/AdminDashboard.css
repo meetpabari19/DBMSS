@@ -1,0 +1,53 @@
+.admin-dashboard {
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.admin-dashboard h2 {
+  margin-bottom: 20px;
+}
+
+.stats {
+  margin-bottom: 30px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.filters{
+    margin-right:30px;
+}
+
+.select-filter{
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+}
+
+.select-filter select{
+    border-radius: 4px;
+    padding: 2px;
+}
