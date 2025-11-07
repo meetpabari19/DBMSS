@@ -61,21 +61,26 @@ export default function Dashboard({ token, onLogout }) {
 
     navigator.geolocation.getCurrentPosition(
       async (pos) => {
-        // const lat = pos.coords.latitude;
-        // const lon = pos.coords.longitude;
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
 
         // const lat = 18.806813;
         // const lon = 73.319644;
 
-        const lat = 21.863221;
-        const lon = 72.949822;
+        // const lat = 21.863221;
+        // const lon = 72.949822;
+
+        // const lat =18.46444 ;
+        // const lon =   73.867875
+        // const lat =18.519924;
+        // const lon =  73.845682;
 
         setUserLocation({
           lat: lat.toFixed(5),
           lon: lon.toFixed(5),
         });
 
-        setStatus(`Coords: ${lat.toFixed(5)}, ${lon.toFixed(5)} — querying backend...`);
+        setStatus(`Coords: ${lat.toFixed(5)}, ${lon.toFixed(5)} — Fetching Information`);
 
         try {
           const res = await fetch(
@@ -129,11 +134,11 @@ export default function Dashboard({ token, onLogout }) {
       <p>{status}</p>
       <button onClick={getLocation}>Get Location & Road Type</button>
 
-      {userLocation.lat && userLocation.lon && (
+      {/* {userLocation.lat && userLocation.lon && (
         <p style={{ marginTop: "10px", color: "gray" }}>
           📍 <b>Latitude:</b> {userLocation.lat}, <b>Longitude:</b> {userLocation.lon}
         </p>
-      )}
+      )} */}
 
       {info && (
         <div className="result">

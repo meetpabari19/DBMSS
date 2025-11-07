@@ -15,12 +15,18 @@ export default function Report({ onClose, vehicle }) {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (pos) => {
-          // const { latitude, longitude } = pos.coords;
+          const { latitude, longitude } = pos.coords;
           // const latitude = 18.806813;
           // const longitude= 73.319644;
 
-          const latitude = 21.863221;
-          const longitude= 72.949822;
+          // const latitude = 21.863221;
+          // const longitude= 72.949822;
+
+          // const latitude = 18.46444;
+          // const longitude=   73.867875;
+
+          // const latitude = 18.519924;
+          // const longitude=  73.845682;
           setCoords({ lat: latitude, lon: longitude });
         },
         (err) => {

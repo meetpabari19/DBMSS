@@ -160,6 +160,8 @@ export default function AdminDashboard() {
           <option value="Rough">Rough   </option>
           <option value="Potholes">Potholes</option>
           <option value="Under Construction">Under Construction</option>
+          <option value="Flooded">Flooded</option>
+          <option value="Blocked">Blocked</option>
 
         </select>
 
@@ -171,6 +173,7 @@ export default function AdminDashboard() {
           <option value="Low">Low</option>
           <option value="Medium">Medium</option>
           <option value="High">High</option>
+          <option value="Jammed">Jammed</option>
         </select>
         </div>
       </div>
